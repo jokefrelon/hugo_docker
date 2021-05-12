@@ -31,5 +31,6 @@ docker run -it --rm --name hugo -p 1313:1313 hugo hugo server -p 1313 --bind "0.
 ## Thanks（￣︶￣）↗　
 
 [hugo](https://github.com/gohugoio/hugo)
+
 [hugo-theme-stack](https://github.com/CaiJimmy/hugo-theme-stack)
 
