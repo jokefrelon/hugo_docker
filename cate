@@ -1,0 +1,10 @@
+#!/bin/bash
+cd /root/pblog/content/categories
+mkdir $1
+cd $1
+echo "---" >> _index.md
+echo "title: $1" >> _index.md
+echo "description: " >> _index.md
+echo "slug: $1" >> _index.md
+echo "image: " >> _index.md
+echo "---" >> _index.md

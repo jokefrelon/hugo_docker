@@ -1,0 +1,13 @@
+#!/bin/bash
+cd /root/pblog/content/post
+mkdir $1
+cd $1
+echo "---" >> index.md
+echo "author: Joker" >> index.md
+echo "title: $1" >> index.md
+echo "date: `date "+%Y-%m-%d"`" >> index.md
+echo "description: " >> index.md
+echo "image: " >> index.md
+echo "categories: []" >> index.md
+echo "tags: []" >> index.md
+echo "---" >> index.md
