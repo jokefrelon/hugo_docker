@@ -1,23 +1,23 @@
 FROM ubuntu:20.04
-ENV VERSION 0.83.1
-ENV THEME_VERSION v2.3.0
-ENV TV 2.3.0
+
+ENV VERSION 0.83.1 
+ENV	THEME_VERSION v3.16.0 
+ENV	TV 3.16.0
+
 COPY sources.list /etc/apt/ 
 COPY svg.zip /root/
 WORKDIR /root
 RUN export LANG=C.UTF-8 \
 	&& apt update \
-    && export DEBIAN_FRONTEND=noninteractive DEBCONF_NONINTERACTIVE_SEEN=true \
-    && echo -e "tzdata tzdata/Areas select Asia\ntzdata tzdata/Zones/Asia select Shanghai" > pre.txt \
-    && debconf-set-selections pre.txt \
+    	&& echo "Asia\nShanghai" | apt-get install -y tzdata \
 	&& apt -y install wget git nano unzip zsh curl ncdu \
-	&& wget https://github.com/gohugoio/hugo/releases/download/v$VERSION/hugo_extended_$VERSION\_Linux-64bit.tar.gz -O hugo.tar.gz \
+	&& wget https://ghp.jokeme.top/https://github.com/gohugoio/hugo/releases/download/v$VERSION/hugo_extended_$VERSION\_Linux-64bit.tar.gz -O hugo.tar.gz \
 	&& mkdir .bin \
 	&& tar -zxvf hugo.tar.gz -C /usr/local/bin \
 	&& rm /usr/local/bin/LICENSE /usr/local/bin/README.md \
 	&& hugo new site pblog
 WORKDIR /root/pblog
-RUN wget https://github.com/CaiJimmy/hugo-theme-stack/archive/refs/tags/$THEME_VERSION.tar.gz -O themes/$THEME_VERSION.tar.gz \
+RUN wget https://ghp.jokeme.top/https://github.com/CaiJimmy/hugo-theme-stack/archive/refs/tags/$THEME_VERSION.tar.gz -O themes/$THEME_VERSION.tar.gz \
 	&& tar -zxf themes/$THEME_VERSION.tar.gz -C themes/ \ 
 	&& mv themes/hugo-theme-stack-$TV  themes/hugo-theme-stack \
 	&& rm themes/$THEME_VERSION.tar.gz \
