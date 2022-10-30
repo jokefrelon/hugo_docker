@@ -6,7 +6,7 @@ echo "---" >> index.md
 echo "author: Joker" >> index.md
 echo "title: $1" >> index.md
 echo "slug: $1" >> index.md
-echo "date: `date "+%Y-%m-%d"`T`date "+%H:%m:%S"`+08:00" >> index.md
+echo "date: `date "+%Y-%m-%d"`T`date "+%H:%M:%S"`+08:00" >> index.md
 echo "description: " >> index.md
 echo "image: " >> index.md
 echo "categories: []" >> index.md
