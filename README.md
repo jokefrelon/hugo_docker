@@ -40,6 +40,12 @@ docker run -it --rm --name hugo -p 1313:1313 hugo hugo server -p 1313 --bind "0.
 
 使用 `cate categories` 来创建categories标签，然后categories的图片可以用svg、png、jpg等，但是还是建议用svg。
 
+
+## ExampleSite
+
+[JokemeBlog](https://jokeme.top)
+
+
 ## Thanks（￣︶￣）↗　
 
 [hugo](https://github.com/gohugoio/hugo)
