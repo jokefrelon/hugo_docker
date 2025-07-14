@@ -43,7 +43,7 @@ docker run -it --rm --name hugo -p 1313:1313 hugo hugo server -p 1313 --bind "0.
 
 ## ExampleSite
 
-[JokemeBlog](https://jokeme.top)
+[JokemeBlog](https://blog.aley.cc)
 
 
 ## Thanks（￣︶￣）↗　
